@@ -3,11 +3,9 @@ from fractions import Fraction
 
 def main():
     st.title("✨ Fraction Calculator ✨")
-    st.write("Perform operations on fractions \( P = \\frac{n}{d} \) and \( Q = \\frac{n}{d} \).")
-
     # Input for P = n/d and Q = n/d in one line
     st.write("### Enter Fractions:")
-    col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([0.5, 1, 0.3, 1, 0.5, 0.5, 1, 0.3, 1])
+    col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([0.3, 1, 0.2, 1, 0.5, 0.5, 1, 0.3, o.1])
     with col1:
         st.write("P = ")
     with col2:
