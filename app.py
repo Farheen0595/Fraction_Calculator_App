@@ -3,11 +3,12 @@ from fractions import Fraction
 
 def main():
     st.title("✨ Fraction Calculator ✨")
+
     # Input for P = n/d and Q = n/d in one line
     st.write("### Enter Fractions:")
-    col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([0.3, 0.5, 0.2, 0.5, 0.5, 0.5, 0.2, 0.5, 0.5])
+    col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([0.5, 1, 0.2, 1, 0.3, 0.5, 1, 0.2, 1])
     with col1:
-        st.write("P= ")
+        st.write("P = ")
     with col2:
         numerator1 = st.number_input("Numerator P", value=1, step=1, key="num1", label_visibility="collapsed")
     with col3:
@@ -15,7 +16,7 @@ def main():
     with col4:
         denominator1 = st.number_input("Denominator P", value=1, step=1, key="den1", label_visibility="collapsed")
     with col5:
-        st.write(", Q=")
+        st.write(", Q = ")
     with col6:
         numerator2 = st.number_input("Numerator Q", value=1, step=1, key="num2", label_visibility="collapsed")
     with col7:
@@ -28,10 +29,11 @@ def main():
         fraction1 = Fraction(numerator1, denominator1)
         fraction2 = Fraction(numerator2, denominator2)
 
-        st.write(f"**Fraction P = n/d**: {fraction1}")
-        st.write(f"**Fraction Q = n/d**: {fraction2}")
+        # Display fractions
+        st.write(f"**Fraction P**: {fraction1}")
+        st.write(f"**Fraction Q**: {fraction2}")
 
-        # Display operations and results
+        # Operations and Results
         st.write("### Choose Operation and View Result:")
         col_op1, col_op2, col_op3, col_op4 = st.columns(4)
 
