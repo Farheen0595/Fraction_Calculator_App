@@ -1,4 +1,4 @@
-from streamlit import st
+import streamlit as st
 from fractions import Fraction
 
 def main():
