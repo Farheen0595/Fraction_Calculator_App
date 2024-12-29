@@ -2,8 +2,6 @@ import streamlit as st
 from fractions import Fraction
 
 def main():
-    import streamlit as st
-    from fraction import Fraction
     
     st.title("Fraction Calculator")
     
