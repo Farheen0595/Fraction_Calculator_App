@@ -5,7 +5,7 @@ def main():
     st.title("✨ Fraction Calculator ✨")
     # Input for P = n/d and Q = n/d in one line
     st.write("### Enter Fractions:")
-    col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([0.3, 0.5, 0.2, 0.5, 0.5, 0.5, 0.2, 0.3, 0.5])
+    col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([0.3, 0.5, 0.2, 0.5, 0.5, 0.5, 0.2, 0.5, 0.5])
     with col1:
         st.write("P= ")
     with col2:
@@ -15,7 +15,7 @@ def main():
     with col4:
         denominator1 = st.number_input("Denominator P", value=1, step=1, key="den1", label_visibility="collapsed")
     with col5:
-        st.write(", Q = ")
+        st.write(", Q=")
     with col6:
         numerator2 = st.number_input("Numerator Q", value=1, step=1, key="num2", label_visibility="collapsed")
     with col7:
