@@ -5,23 +5,25 @@ def main():
     st.title("✨ Fraction Calculator ✨")
     st.write("Perform operations on fractions \( P = \\frac{n}{d} \) and \( Q = \\frac{n}{d} \).")
 
-    # Input for Fraction 1 (P = n/d) and Fraction 2 (Q = n/d) in one line
-    st.write("### Enter Fractions P and Q:")
-    col1, col2, col3, col4, col5, col6, col7, col8 = st.columns([1, 0.3, 1, 0.5, 1, 0.3, 1, 0.5])
+    # Input for P = n/d and Q = n/d in one line
+    st.write("### Enter Fractions:")
+    col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns([0.5, 1, 0.3, 1, 0.5, 0.5, 1, 0.3, 1])
     with col1:
-        numerator1 = st.number_input("Numerator (P)", value=1, step=1, key="num1", label_visibility="collapsed")
+        st.write("P = ")
     with col2:
-        st.write("/")
+        numerator1 = st.number_input("Numerator P", value=1, step=1, key="num1", label_visibility="collapsed")
     with col3:
-        denominator1 = st.number_input("Denominator (P)", value=1, step=1, key="den1", label_visibility="collapsed")
-    with col4:
-        st.write("  Q =")
-    with col5:
-        numerator2 = st.number_input("Numerator (Q)", value=1, step=1, key="num2", label_visibility="collapsed")
-    with col6:
         st.write("/")
+    with col4:
+        denominator1 = st.number_input("Denominator P", value=1, step=1, key="den1", label_visibility="collapsed")
+    with col5:
+        st.write("     Q = ")
+    with col6:
+        numerator2 = st.number_input("Numerator Q", value=1, step=1, key="num2", label_visibility="collapsed")
     with col7:
-        denominator2 = st.number_input("Denominator (Q)", value=1, step=1, key="den2", label_visibility="collapsed")
+        st.write("/")
+    with col8:
+        denominator2 = st.number_input("Denominator Q", value=1, step=1, key="den2", label_visibility="collapsed")
 
     try:
         # Construct fractions
