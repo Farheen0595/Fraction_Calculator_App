@@ -3,23 +3,27 @@ from fractions import Fraction
 
 def main():
     st.title("✨ Fraction Calculator ✨")
-    st.markdown("Perform operations on fractions like \( P = \\frac{n}{d} \) and \( Q = \\frac{n}{d} \).")
+    st.write("Perform operations on fractions \( P = \\frac{n}{d} \) and \( Q = \\frac{n}{d} \).")
 
-    # Input for Fraction 1
+    # Input for Fraction 1 (P)
     st.write("### Enter Fraction 1 (P = n/d):")
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns([1, 0.1, 1])
     with col1:
-        numerator1 = st.number_input("Numerator (n)", value=1, step=1, key="num1")
+        numerator1 = st.number_input("Numerator", value=1, step=1, key="num1")
     with col2:
-        denominator1 = st.number_input("Denominator (d)", value=1, step=1, key="den1")
-
-    # Input for Fraction 2
-    st.write("### Enter Fraction 2 (Q = n/d):")
-    col3, col4 = st.columns(2)
+        st.write("/")
     with col3:
-        numerator2 = st.number_input("Numerator (n)", value=1, step=1, key="num2")
+        denominator1 = st.number_input("Denominator", value=1, step=1, key="den1")
+
+    # Input for Fraction 2 (Q)
+    st.write("### Enter Fraction 2 (Q = n/d):")
+    col4, col5, col6 = st.columns([1, 0.1, 1])
     with col4:
-        denominator2 = st.number_input("Denominator (d)", value=1, step=1, key="den2")
+        numerator2 = st.number_input("Numerator", value=1, step=1, key="num2")
+    with col5:
+        st.write("/")
+    with col6:
+        denominator2 = st.number_input("Denominator", value=1, step=1, key="den2")
 
     try:
         # Construct fractions
@@ -29,8 +33,8 @@ def main():
         st.write(f"**Fraction 1 (P = n/d)**: {fraction1}")
         st.write(f"**Fraction 2 (Q = n/d)**: {fraction2}")
 
-        # Horizontal alignment for operations
-        st.write("### Choose Operation:")
+        # Display operations and results
+        st.write("### Choose Operation and View Result:")
         col_op1, col_op2, col_op3, col_op4 = st.columns(4)
 
         with col_op1:
