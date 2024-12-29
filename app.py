@@ -5,33 +5,31 @@ def main():
     st.title("✨ Fraction Calculator ✨")
     st.write("Perform operations on fractions \( P = \\frac{n}{d} \) and \( Q = \\frac{n}{d} \).")
 
-    # Input for Fraction 1 (P = n/d)
-    st.write("### Enter Fraction 1 (P = n/d):")
-    col1, col2, col3 = st.columns([2, 0.5, 2])
+    # Input for Fraction 1 (P = n/d) and Fraction 2 (Q = n/d) in one line
+    st.write("### Enter Fractions P and Q:")
+    col1, col2, col3, col4, col5, col6, col7, col8 = st.columns([1, 0.3, 1, 0.5, 1, 0.3, 1, 0.5])
     with col1:
-        numerator1 = st.number_input("Numerator", value=1, step=1, key="num1", label_visibility="collapsed")
+        numerator1 = st.number_input("Numerator (P)", value=1, step=1, key="num1", label_visibility="collapsed")
     with col2:
         st.write("/")
     with col3:
-        denominator1 = st.number_input("Denominator", value=1, step=1, key="den1", label_visibility="collapsed")
-
-    # Input for Fraction 2 (Q = n/d)
-    st.write("### Enter Fraction 2 (Q = n/d):")
-    col4, col5, col6 = st.columns([2, 0.5, 2])
+        denominator1 = st.number_input("Denominator (P)", value=1, step=1, key="den1", label_visibility="collapsed")
     with col4:
-        numerator2 = st.number_input("Numerator", value=1, step=1, key="num2", label_visibility="collapsed")
+        st.write("  Q =")
     with col5:
-        st.write("/")
+        numerator2 = st.number_input("Numerator (Q)", value=1, step=1, key="num2", label_visibility="collapsed")
     with col6:
-        denominator2 = st.number_input("Denominator", value=1, step=1, key="den2", label_visibility="collapsed")
+        st.write("/")
+    with col7:
+        denominator2 = st.number_input("Denominator (Q)", value=1, step=1, key="den2", label_visibility="collapsed")
 
     try:
         # Construct fractions
         fraction1 = Fraction(numerator1, denominator1)
         fraction2 = Fraction(numerator2, denominator2)
 
-        st.write(f"**Fraction 1 (P = n/d)**: {fraction1}")
-        st.write(f"**Fraction 2 (Q = n/d)**: {fraction2}")
+        st.write(f"**Fraction P = n/d**: {fraction1}")
+        st.write(f"**Fraction Q = n/d**: {fraction2}")
 
         # Display operations and results
         st.write("### Choose Operation and View Result:")
